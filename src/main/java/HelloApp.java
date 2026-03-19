@@ -6,11 +6,16 @@ public class HelloApp {
             System.out.println("Hello, World!");
         } else {
 
-            System.out.print("Hello ");
+            String result = "Hello ";
 
             for (String name : args) {
-                System.out.print(name + " ");
+                result += name + ", ";
             }
+
+            // Remove last ", "
+            result = result.substring(0, result.length() - 2);
+
+            System.out.println(result);
         }
     }
 }
